@@ -13,3 +13,61 @@ Notes On '==' and '===':
 
 == (Loose Equality): Performs type coercion, meaning it converts values to the same type before comparing. We use this when we want flexible comparisons, but it's risky for user inputs or mixed types. 
 === (Strict Equality): Checks both value and type without coercion. Prefer === for security and accuracy, especially in conditionals, form validation, or when dealing with GET/POST data to avoid bugs from type mismatches. When to Choose: Use === by default for comparisons involving variables from external sources (like $_GET). Reserve == for cases where coercion is intentional.
+
+Sample Inputs and Sample Outputs:
+Each PHP file in this lab shpws a specific aspect of control flow and expressions.
+Here are examples of what each file does along with what output you should see when you test them.
+
+01_expressions.php
+This file carries out arthmetic, string and logical operations. It accepts no input. When run, this emits results for an addition operation, a multiplication operation, a comparision and a generic ternary test to the terminal.
+For instance, it shiws sum = 13 prod = 30 a =15, and explains that PHP considers text that begins with a number to be that number, so "5cats" + 1 produces 6.
+If that is done in a browser with ?score=80 in the URL, it prints Result: Pass.
+
+02<branching.php
+This file tests decision-making structures using if, elseif, switch, and match.
+You can test this by running:
+
+http://localhost:8000/02_branching.php?role=admin&day=Sat&code=404
+The output will read:
+
+"Welcome, admin"
+"Enjoy your weekend!"
+"404 => Not Found"
+
+Changing these query parameters changes the message to:
+(For example)
+?role=editor&day=Mon&code=200 → “Welcome, editor / Back to work. / OKish”
+
+03_loops.php
+This file shows how to use loops within PHP.
+The code shows the multiples of 7 from a terminal at runtime. It adds numbers until the sum goes over 100. It implements the FizzBuzz challenge with that addition.
+The last part prints a 10 by 10 table of multiplictation results formatted into HTML code.
+This table can be viewed in the browser.
+
+04_grade_form/index.php
+This section creates a grade calculator form.
+A letter grade(A-F) returns for you upon entering a number between 0 and 100.
+For example:
+Entered 85 - "Your grade is B."
+Entered 45 - "Your grade is F. Consider office hours for support"
+It uses conditional logic to validate user input.
+
+05_toolkit/index.php
+This is the most complete program, a small toolkit that changes depending on what "view" you select on the URL.
+
+?view = times - shows the current time, followed by the next five minutes in a vertical list.
+Example output:
+12:00:00
+12:01:00
+12:02:00
+12:03:00
+
+?view=table - generates the 10x10 multiplication table using nested loops.
+
+?view=stats&nums= 5,10,15,20 - computes statistics from a list of numbers.
+Example output:
+Count: 4
+Sum: 50
+Max: 20
+Average: 12.50
+The system will show an error message saying "enter a valid comma-sparated list of integers" in the event that the input is not an integer. This includes letters, empty input or other symbols.
