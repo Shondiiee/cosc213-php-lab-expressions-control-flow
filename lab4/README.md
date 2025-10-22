@@ -20,7 +20,7 @@ Here are examples of what each file does along with what output you should see w
 
 01_expressions.php
 This file carries out arthmetic, string and logical operations. It accepts no input. When run, this emits results for an addition operation, a multiplication operation, a comparision and a generic ternary test to the terminal.
-For instance, it shiws sum = 13 prod = 30 a =15, and explains that PHP considers text that begins with a number to be that number, so "5cats" + 1 produces 6.
+For instance, it shows sum = 13 prod = 30 a =15, and explains that PHP considers text that begins with a number to be that number, so "5cats" + 1 produces 6.
 If that is done in a browser with ?score=80 in the URL, it prints Result: Pass.
 
 02<branching.php
@@ -36,13 +36,11 @@ The output will read:
 
 Changing these query parameters changes the message to:
 (For example)
-?role=editor&day=Mon&code=200 → “Welcome, editor / Back to work. / OKish”
+?role=editor&day=Mon&code=200 → “Welcome, user / Back to work. / OKish”
 
 03_loops.php
 This file shows how to use loops within PHP.
 The code shows the multiples of 7 from a terminal at runtime. It adds numbers until the sum goes over 100. It implements the FizzBuzz challenge with that addition.
-The last part prints a 10 by 10 table of multiplictation results formatted into HTML code.
-This table can be viewed in the browser.
 
 04_grade_form/index.php
 This section creates a grade calculator form.
@@ -57,10 +55,11 @@ This is the most complete program, a small toolkit that changes depending on wha
 
 ?view = times - shows the current time, followed by the next five minutes in a vertical list.
 Example output:
-12:00:00
-12:01:00
-12:02:00
-12:03:00
+17:58:41
+17:59:41
+18:00:41
+18:02:41
+18:03:41
 
 ?view=table - generates the 10x10 multiplication table using nested loops.
 
